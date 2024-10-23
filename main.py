@@ -37,12 +37,6 @@ class WebScraper:
 
             driver.get(url)
 
-            # Handle cookies or CAPTCHAs if needed (example)
-            try:
-                accept_button = driver.find_element(By.XPATH, "//button[contains(text(), 'Accept')]")
-                accept_button.click()
-            except Exception as e:
-                print(f"No cookie prompt found: {str(e)}")
 
             # After the page is loaded and cookies are handled, extract the HTML
             html_content = driver.page_source
